@@ -1,0 +1,687 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 80px;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Set default text color to white */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 280px;
+}
+
+.sidebar {
+    background-color: rgb(0, 0, 0); /* Sidebar background color */
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0; /* Start with zero width */
+    overflow-x: hidden; /* Hide content when collapsed */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    border: white ;
+}
+.sidebar-open .sidebar {
+    width: 270px; /* Sidebar width when open */
+}
+
+
+.sidebar ul {
+    padding: 56px;
+}
+
+.sidebar ul li {
+    text-decoration: none; /* Remove text decoration */
+    margin-top: 50px;
+    color: white; /* Set text color to white */
+}
+.sidebar ul li a {
+    color: #818181; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure links take up full width */
+    padding: 10px; /* Add padding around links for better click area */
+    font-size: 20px;
+}
+/* .sidebar ul li a:hover {
+    border-radius: 50%;
+    background-color: rgba(248, 248, 248, 0.953); /* Add a slight background on hover for visibility */
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: none; /*Remove default background */
+    border: none; /* Remove default border */
+    color: black; /* Set text color to white */
+    background-color: white;
+}
+
+.mainbar-section .flow-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 67px;
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-linear-gradient(left, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mainbar-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust space between items as needed */
+    max-width: 1000px; /* Ensure it doesn’t exceed desired width */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Adjust padding around the content */
+}
+.mainbar-section img {
+    margin-right:600px; /* Adjust as needed for spacing between hamburger and logo */
+}
+
+.flow-text {
+    display: inline-block;
+    width: 380px; /* Adjust width as needed */
+    height: 52px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mainbar-section {
+    max-width: 1000px;
+    margin-left: 1166px;
+    margin-right: 800px;
+    padding: 20px; /* Padding around the content */
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainbar-section .dot {
+    height: 8px; /* Adjust the size as needed */
+    width: 8px;  /* Adjust the size as needed */
+    background-color: #4caf50;
+    border-radius: 50%; /* Use 50% to make it a circle */
+    display: inline-block;
+    margin-right: 0px; /* Adjust spacing if needed */
+}
+
+.mainbar-section .online {
+    color: white;
+    border: solid black;
+    font-family: 'Arial', sans-serif;
+    margin-right: 50px;
+}
+
+.mainbar-section .link {
+    background-color: rgba(45, 47, 51, 0.991); /* Light black background color */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    padding: 8px 16px; /* Reduce padding */
+    margin: 5px; /* Adjust spacing between buttons if needed */
+    display: flex; /* Flexbox for aligning text and image */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50px; /* Rounded corners (optional) */
+    font-size: 12px; /* Reduce font size */
+    text-decoration: none;
+}
+
+.mainbar-section .link img {
+    width: 20px; /* Adjust image size */
+    height: 20px; /* Adjust image size */
+    filter: invert(1); /* Make image color white */
+    margin-right: 8px; /* Space between image and text */
+}
+
+.mainbar-section .link span {
+    font-size: 16px; /* Ensure text size matches image size */
+}
+
+.buttons-container {
+    margin-top: 25px;
+    display: flex; /* Align buttons in a row */
+    flex-direction: row; /* Ensure buttons are in a row */
+    gap: 5px; /* Space between buttons */
+    text-decoration: none;
+    margin-right: 43px;
+}
+
+.mainbar-section p {
+    margin-top: 25px;
+    color: rgb(146, 139, 139);
+}
+
+.timeline-section .topsection,
+.timeline-section .topsection1 {
+    max-width: 500px;
+    margin-left: 949px;
+    margin-right: 800px;
+    flex-direction: row;
+    text-align: center;
+    padding: 0;
+}
+
+.timeline-section .topsection h1,
+.timeline-section .topsection1 h1 {
+    background: -webkit-linear-gradient(left, #ff6ec4, #7873f5); /* Gradient background */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    margin-left: 27%;
+    display: inline-block; /* Ensure text is inline */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 398px; /* Set specific width */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.timeline-section .topsection1 h1 {
+    margin-left: 30%; /* Adjust for Experience section */
+}
+
+
+.timeline {
+    position: relative;
+    min-height: 150px;
+    width: 100%; /* Ensure timeline spans full width */
+}
+
+.line {
+    position: absolute;
+    z-index: 2;
+    left: 59%; /* Center the line */
+    width: 2px;
+    top: 0; /* Adjust top and bottom to span full height */
+    bottom: 0;
+    background-color: white; /* Change color to white for visibility */
+}
+
+.line:before,
+.line:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: white; /* Change color to white for visibility */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line::after {
+    bottom: 0;
+}
+
+.section {
+    width: 500px;
+    display: flex;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1;
+    margin: 25px 0; /* Reduced margin */
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 1rem;
+    align-items: center;
+    min-height: 100px; /* Adjusted height */
+    color: white; /* Default text color */
+    background-color: black; /* Background color for better visibility */
+}
+
+.section:nth-child(odd) {
+    flex-direction: row-reverse;
+    transform: translateX(100%);
+}
+
+.bead {
+    position: absolute;
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: white; /* Change color to white for visibility */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.content {
+    width: calc(50% - 1rem); /* Adjusted width */
+}
+
+.show-me:nth-child(n) {
+    transform: none;
+    opacity: 1;
+}
+
+h1 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.bar-section {
+    margin-left: 1020px;
+    max-width: 700px;
+}
+/* Font settings for the About Me section */
+.aboutme {
+    margin-left: 350px;
+    max-width: 900px;
+    font-family: 'Arial', sans-serif; /* Replace with your preferred font-family */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+/* Title styling */
+.aboutme .title {
+    font-family:Poppins,sans-serif ;
+    font-size: 36px; /* Adjust size as needed */
+    color: #a270ad; /* Dark gray color for the title */
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center;
+    justify-content: center;
+    margin-left: 19px;
+}
+.aboutme .title span{
+    color: white;
+}
+/* Styling for the intro section */
+.aboutme .intro {
+    padding: 15px; /* Padding inside the intro section */
+    background-color: rgb(124, 106, 125); /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Paragraph styling */
+.aboutme .intro p {
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line-height for better spacing between lines */
+    color: white; /* Light gray color for text */
+}
+.contactme {
+    padding: 20px;
+    background: -webkit-linear-gradient(left, #ff6ec4, #7873f5); /* Gradient background */
+    -webkit-background-clip: border-box; /* Ensure gradient covers the entire box */
+    border-radius: 6px; /* Rounded corners to match previous design */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 750px; /* Increased width */
+    max-width: 900px; /* Maximum width to ensure responsiveness */
+    margin-right: 50px; /* Center the section horizontally */
+}
+
+.contactme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tech {
+    margin: 25px 0;
+    margin-left: 360px;
+    text-align: center;
+}
+.tech{
+    background: -webkit-linear-gradient(left, #ff6ec4, #7873f5); /* Gradient background */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center boxes horizontally */
+    padding: 20px;
+    margin-left: 350px;
+    margin-bottom: 50px;
+    gap: 20px; /* Adjust gap as needed */
+}
+.tech{
+    font-family: 'poppins',sans-serif;
+    font-size: 30px;
+    /* margin-left: 30px; */
+}
+
+.box {
+    width: 80px; /* Set width */
+    height: 80px; /* Set height to be equal to width */
+    background-color: black; /* Set background color or any other style */
+    border: rgb(95, 92, 92) solid;
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    position: relative; /* Positioning context for margin adjustments */
+    background-size: 59px; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Alternate boxes' vertical positioning */
+.technologies .box:nth-child(odd) {
+    margin-top: -6px; /* Move box up */
+}
+
+.technologies .box:nth-child(even) {
+    margin-top: 7px; /* Move box down */
+}
+
+#box1{
+    background-image: url('icons/java.png');
+}
+#box1:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box2{
+    background-image: url('icons/python.png');
+}
+#box2:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box3{
+    background-image: url('icons/html.png');
+}
+#box3:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box4{
+    background-image: url('icons/css.png');
+}
+#box4:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box5{
+    background-image: url('icons/js.webp');
+}
+#box5:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box6{
+    background-image: url('icons/react.png');
+}
+#box6:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+#box7{
+    background-image: url('icons/node.png');
+}
+#box7:hover{
+    /* width: 85px;
+    height: 85px; */
+    transform: scale(1.1);
+}
+/* .box::after {
+    content: attr(data-name); 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    display: none; 
+    background-color: white;
+    color: black;
+}
+
+.box:hover::after {
+    display: block; 
+} */
+.contactme {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 450px;
+}
+
+.contactme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.success-message {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: green; /* Default color to green */
+}
+.aboutme .highlight{
+    font-weight: bold;
+    font-size: 18px;
+    background: -webkit-linear-gradient(left, #ff0000, #003fab); /* Gradient background */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+}
+.hamburger{
+    color: white;
+    margin-bottom: 550px;
+}
+#hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1; /* Ensure it's on top of other elements */
+}
+
+/* Hide hamburger icon when sidebar is open */
+.sidebar-open #hamburger {
+    display: none;
+}
+.projects  .topsection1{
+    background: -webkit-linear-gradient(left, #ff6ec4, #7873f5); /* Gradient background */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    
+    margin-left: 380px;
+}
+.hamburger {
+    font-size: 30px;
+    color: white; /* Set color of hamburger icon to white */
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1; /* Ensure it's above other content */
+}
+.projects{
+    margin-bottom: 30px;
+}
+
+.rectangle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px; /* Adjust width based on new box sizes and spacing */
+    gap: 20px; /* Add some space between rows */
+    margin-left: 450px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.outer-rectangle {
+    width: 270px; /* Increased width */
+    height: 270px; /* Increased height */
+    background-size: cover; /* Ensure the image covers the block */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid white; /* Border around the blocks */
+    border-radius:50px ;
+}
+
+.outer-rectangle:nth-child(1) {
+    background-image: url('icons/jarvis.png'); /* Replace with your image URL */
+}
+
+.outer-rectangle:nth-child(2) {
+    background-image: url('icons/spotify.jpg'); /* Replace with your image URL */
+}
+
+.outer-rectangle:nth-child(3) {
+    background-image: url('icons/contacts.webp'); /* Replace with your image URL */
+}
+
+.outer-rectangle:nth-child(4) {
+    background-image: url('icons/detection.webp'); /* Replace with your image URL */
+}
+
+
+.outer-rectangle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.outer-rectangle:hover {
+    transform: scale(1.05); /* Zoom effect: increase size by 5% */
+    z-index: 10; /* Bring the zoomed element above others */
+}
+/* Hide popup rectangle by default */
+.popup-rectangle {
+    border-radius: 35px;
+    width: 380px;
+    height: 250px;
+    background-color: black;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+     display: none;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.popup-left {
+    transform: translate(-120%, -50%); /* Adjust as needed */
+}
+
+.popup-right {
+    transform: translate(30%, -50%); /* Adjust as needed */
+}
+
+/* Tooltip styling */
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%; /* Position above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.outer-rectangle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
