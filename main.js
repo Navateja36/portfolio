@@ -7,6 +7,18 @@ var typed = new Typed(".flow-text", {
     showCursor: false
 });
 
+// Function to change title when user switches tabs
+function handleVisibilityChange() {
+    var title = document.title;
+    if (document.hidden) {
+      // User switched to another tab
+      document.title = '🙏 Come back to Portfolio';
+    } else {
+      // User came back to the tab
+      document.title = ' Portfolio | Navateja M';
+    }
+  }
+
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".timeline .section");
     const line = document.querySelector(".timeline .line");
